@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOOTAGE — Pitch de reposicionamiento</title>
+  <meta name="description" content="FOOTAGE: “Lo que la cámara no muestra” — Plan de Rescate y Reposicionamiento Comercial.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/loopsmith/type.css">
+  <link rel="stylesheet" href="css/loopsmith/loader.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+  <!-- Módulos de LibreriaDeAnimaciones (animaciones/lusion/effects), sin modificar. -->
+  <script src="js/loopsmith/type.js" defer></script>
+  <script src="js/loopsmith/loader.js" defer></script>
+  <script src="js/loopsmith/cursor.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <main class="stage" aria-roledescription="presentación">
+    <svg class="thread" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+    <div class="chapters"></div>
+
+    <div class="hud">
+      <div class="hud-top">
+        <span class="hud-brand">Footage</span>
+        <span class="hud-rec"><i></i>REC</span>
+        <span class="hud-chapter" aria-live="polite"><b class="hud-n">01</b> / 08 — <span class="hud-label">Introducción</span></span>
+      </div>
+      <nav class="hud-bottom" aria-label="Capítulos">
+        <ol class="hud-chapters">
+          <li><button type="button" aria-label="Capítulo 1: Introducción">01</button></li>
+          <li><button type="button" aria-label="Capítulo 2: El problema">02</button></li>
+          <li><button type="button" aria-label="Capítulo 3: Misión y visión">03</button></li>
+          <li><button type="button" aria-label="Capítulo 4: Mercado">04</button></li>
+          <li><button type="button" aria-label="Capítulo 5: Cintas Recuperadas">05</button></li>
+          <li><button type="button" aria-label="Capítulo 6: Funnel 5A">06</button></li>
+          <li><button type="button" aria-label="Capítulo 7: Viabilidad">07</button></li>
+          <li><button type="button" aria-label="Capítulo 8: Plan 30 días">08</button></li>
+        </ol>
+        <div class="hud-steps" role="status"></div>
+        <span class="hud-hint">← → · espacio · rueda</span>
+        <button type="button" class="hud-fs">Pantalla completa · F</button>
+      </nav>
+    </div>
+
+    <div class="boot" data-ls-loader-root>
+      <div class="ls-loader" data-ls-loader hidden aria-hidden="true">
+        <span class="ls-loader__mark" data-ls-loader-mark>● REC</span>
+        <span class="ls-loader__count" data-ls-count>000</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

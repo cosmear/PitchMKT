@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "footage", "runtimeExecutable": "python", "runtimeArgs": ["serve.py", "5521"], "port": 5521 }
+  ]
+}
