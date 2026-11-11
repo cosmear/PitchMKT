@@ -59,7 +59,9 @@ export default {
     {
       name: "FALLA",
       build(tl) {
-        tl.from(".c2-c .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
+        // La falla financiera toma el protagonismo: las otras dos columnas pasan a segundo plano.
+        tl.to([".c2-a", ".c2-b"], { opacity: 0.4, duration: 0.6, ease: "power2.out" }, 0)
+          .from(".c2-c .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
           .from(".c2-c .big", { ...OUT, scale: 1.4, transformOrigin: "0 100%", duration: 1, ease: "expo.out" }, 0.15);
         rise(tl, ".c2-c .c2-cap", 0.5);
         rise(tl, ".c2-c .c2-rows > div", 0.7, { stagger: 0.18 });
