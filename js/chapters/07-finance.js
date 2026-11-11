@@ -12,8 +12,9 @@ const X = (copies) => C.x0 + copies * C.sx;
 const Y = (usd) => C.y0 - usd * C.sy;
 const END = 1500;
 const chart = chain(
-  cubic([0, 480], [100, 480], [30, 960], [160, 960]), [800, 960],
-  cubic([800, 960], [840, 960], [C.x0, 920], [C.x0, C.y0]),
+  cubic([0, 480], [80, 480], [30, 318], [110, 318]), [C.x0 - 40, 318],
+  cubic([C.x0 - 40, 318], [C.x0 - 10, 318], [C.x0, 330], [C.x0, Y(9000)]),
+  [C.x0, C.y0],
   [X(END), Y(END * F.net)],
   cubic([X(END), Y(END * F.net)], [1850, Y(END * F.net) - 40], [1880, 420], [1920, 420]),
 );
@@ -59,7 +60,7 @@ export default {
         <line class="c7-axis" x1="${C.x0}" x2="${C.x0}" y1="${C.y0}" y2="${Y(9000)}"/>
         ${[500, 1000, 1500].map((c) => `<text x="${X(c)}" y="${C.y0 + 30}" text-anchor="middle">${c.toLocaleString("es-AR")}</text>`).join("")}
         <text x="${X(END) + 20}" y="${C.y0 + 56}" text-anchor="end">copias vendidas</text>
-        <text x="${C.x0 - 14}" y="${Y(9000) + 6}" text-anchor="end">USD</text>
+        <text x="${C.x0 + 14}" y="${Y(9000) + 6}">USD</text>
       </g>
       <g class="c7-target-g">
         <line class="c7-target" x1="${C.x0}" x2="${X(END) + 20}" y1="${BE.y}" y2="${BE.y}"/>

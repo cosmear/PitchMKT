@@ -4,7 +4,7 @@ import { OUT, rise } from "./shared.js";
 
 const Y = 640;
 const COLS = [120, 560, 1000, 1440];
-const base = chain([0, Y], [1760, Y], cubic([1760, Y], [1870, Y], [1850, 960], [1920, 960]));
+const base = chain([0, Y], [1760, Y], cubic([1760, Y], [1870, Y], [1850, 336], [1920, 336]));
 
 export default {
   shapes: { base },
@@ -23,7 +23,6 @@ export default {
         <i class="member__node"></i><i class="member__tick"></i>
         <p class="mono">${m.role}</p>
         <h3>${m.name}</h3>
-        <p class="small">${m.skills}</p>
       </article>`).join("")}`,
   steps: [
     {

@@ -6,7 +6,7 @@ import { OUT, header, enterHeader, rise, sink } from "./shared.js";
 const AX = { y: 640, x0: 200, x1: 1700, max: 70 };
 const px = (usd) => AX.x0 + (usd / AX.max) * (AX.x1 - AX.x0);
 const base = chain(
-  cubic([0, 960], [80, 960], [30, AX.y], [110, AX.y]),
+  cubic([0, 336], [80, 336], [30, AX.y], [110, AX.y]),
   [AX.x1, AX.y],
   cubic([AX.x1, AX.y], [1810, AX.y], [1830, 600], [1920, 600]),
 );
@@ -38,7 +38,7 @@ export default {
     ${MARKS.map((m) => `
       <div class="blk abs c3-mk ${m.footage ? "c3-mk--footage" : ""} ${m.align === "right" ? "c3-mk--right" : ""}"
         style="top:${m.top - (m.footage ? 72 : 60)}px; left:${m.align === "right" ? px(m.price) - 520 : px(m.price) + 14}px">
-        <h4>${m.name}</h4><p>${m.priceText}${m.footage ? ` · ${m.text}` : ""}</p>
+        <h4>${m.name}</h4><p>${m.priceText}</p>
       </div>`).join("")}
     ${[complex, madison, sh2].map((c, i) => `
       <div class="blk abs c3-diff" style="left:${[120, 710, 1300][i]}px"><p class="mono">Frente a ${c.name}</p><p class="small">${c.text}</p></div>`).join("")}

@@ -6,9 +6,9 @@ export const META = {
   game: "FOOTAGE",
   tagline: "Lo que la cámara no muestra",
   pitch: "Plan de Rescate y Reposicionamiento Comercial",
-  course: "UADE · Marketing para Videojuegos · Parcial 2 (Evaluación Grupal Simulada)",
+  course: "UADE · Marketing para Videojuegos",
   date: "Noviembre de 2026 · Docente: Lic. Romina Luna",
-  project: "Videojuego de tesis del Estudio NQS (Martina Dalbene, Renzo Bongiorno y equipo)",
+  project: "Videojuego de tesis del Estudio NQS",
 };
 
 export const CHAPTERS = [
@@ -23,10 +23,10 @@ export const CHAPTERS = [
 ];
 
 export const TEAM = [
-  { name: "Federico Degraf", role: "Marketing Manager", skills: "Viabilidad económica, administración de presupuesto (USD 7.000) y cálculo de ROI." },
-  { name: "Cosme Argerich", role: "Analista de Datos", skills: "Investigación empírica del Buyer Persona, segmentación cuantitativa y cruce Bartle/Octalysis." },
-  { name: "Martin Leandro Rota", role: "Social Media Manager", skills: "Narrativa de marca, gestión de PR, vínculos con creadores y campaña “Cintas Recuperadas”." },
-  { name: "Simón Morales Lozano", role: "Especialista en Growth", skills: "Embudo 5A, optimización de Steamworks, SEO orgánico y pauta digital." },
+  { name: "Federico Degraf", role: "Marketing Manager" },
+  { name: "Cosme Argerich", role: "Analista de Datos" },
+  { name: "Martin Leandro Rota", role: "Social Media Manager" },
+  { name: "Simón Morales Lozano", role: "Especialista en Growth" },
 ];
 
 export const PROBLEM = {
@@ -40,7 +40,6 @@ export const PROBLEM = {
     items: ["Sin tráiler público oficial", "Sin página de Steam habilitada", "Sin lista de deseados (wishlists)"],
     notes: [
       "Instagram oficial: cuenta únicamente con seguidores del propio equipo de desarrollo.",
-      "≈ ARS 200.000 invertidos en materiales gráficos offline (banner, tarjetas de Playday) y herramientas de IA, sin retorno cuantificable.",
     ],
   },
   saturation: {
@@ -74,7 +73,7 @@ export const POSITIONING = {
     { name: "MADiSON", price: 34.99, priceText: "USD 34,99", text: "Adoptamos la cámara como dispositivo para revelar lo invisible, pero eliminamos el precio prohibitivo y los jumpscares." },
     { name: "Silent Hill 2", price: 69.99, priceText: "USD 69,99", text: "Rescatamos los ángulos de cámara fija, controles tanque y nostalgia de PS2, prescindiendo del combate para maximizar la vulnerabilidad del explorador." },
   ],
-  footage: { name: "FOOTAGE", price: 7.99, priceText: "USD 7,99", text: "con precio regional" },
+  footage: { name: "FOOTAGE", price: 7.99, priceText: "USD 7,99" },
 };
 
 export const MARKET = {
@@ -139,12 +138,8 @@ export const CAMPAIGN = {
       code: "CINTA 04", name: "10 creadores de terror indie", kind: "Alianzas",
       lead: "Envío anticipado de la build jugable a microcreadores hispanohablantes especializados con audiencias hipersegmentadas:",
       creators: [
-        ["Juegos de terror de itchio", "800 seg."],
-        ["John x Longplays", "100 seg., Argentina"],
-        ["Insane Gameplay", "30 seg., Argentina"],
         ["The Bizarre Bastard Gameplays", "30K seg., Chile"],
         ["Jhotade", "1.800 seg."],
-        ["Blog Terrores", "300 seg."],
       ],
     },
     {
@@ -169,8 +164,8 @@ export const FUNNEL = {
       ],
     },
     {
-      name: "Appeal", es: "Atracción / Interés", short: "Estética PS2 · espacios liminales",
-      points: ["Impacto visual retro de PlayStation 2, espacios liminales del hotel y ángulos de tensión sin monstruos explícitos."],
+      name: "Appeal", es: "Atracción / Interés", short: "Videos verticales · diferencial del juego",
+      points: ["Videos en formato vertical que expliquen el diferencial del juego."],
     },
     {
       name: "Ask", es: "Indagación / Validación", short: "Página de Steam · demo · Discord",
@@ -184,11 +179,11 @@ export const FUNNEL = {
       name: "Act", es: "Acción / Conversión", short: "Wishlists · compra a USD 7,99",
       points: [
         "Incorporación masiva a la lista de deseados (wishlists) antes del lanzamiento.",
-        "Conversión de compra en la primera semana a USD 7,99 con descuento inicial de lanzamiento y precio regional.",
+        "Conversión de compra en la primera semana a USD 7,99 con descuento inicial de lanzamiento.",
       ],
     },
     {
-      name: "Advocate", es: "Recomendación / Lealtad", short: "Reseñas · videos de teorías",
+      name: "Advocate", es: "Recomendación / Lealtad", short: "Reseñas · videos de teorías · comunidad",
       points: ["El final abierto incentiva a redactar reseñas positivas en Steam y grabar videos de teorías y reacciones."],
     },
   ],
@@ -232,7 +227,7 @@ export const PLAN = {
       tt: { format: "Video corto", axis: "Mecánica central: videocámara revelando eventos del pasado y CDs.", goal: "Interés en mecánicas de juego y redirección a wishlist." },
     },
     {
-      ig: { format: "Reels colaborativos", axis: "Envío de build a 10 microcreadores; testimonios destacando la tensión sin combate.", goal: "Superar la meta de 200 seguidores y generar prueba social." },
+      ig: { format: "Reels colaborativos", axis: "Envío de build a microcreadores; testimonios destacando la tensión sin combate.", goal: "Superar la meta de 200 seguidores y generar prueba social." },
       tt: { format: "Videos cortos de reacción", axis: "Reacciones ante la vulnerabilidad del jugador al no poseer armas ni defensa.", goal: "Tráfico hacia la demo gratuita jugable en itch.io/Steam." },
     },
     {

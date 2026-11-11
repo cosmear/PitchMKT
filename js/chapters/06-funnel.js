@@ -16,6 +16,7 @@ const stageStep = (i) => ({
       .from(`.c6-d${i} > *`, { ...OUT, y: 22, duration: 0.6, stagger: 0.1, ease: "power3.out" }, 0.75);
     // Ask y Act ocurren en Steam: el tramo se marca al llegar.
     if (i === 2) tl.from(".c6-steam line", { scaleX: 0, transformOrigin: "0 50%", duration: 0.8, ease: "power2.inOut" }, 0.8).from(".c6-steam-label", { ...OUT, duration: 0.5 }, 1.1);
+    if (i === 3) tl.to([".c6-steam", ".c6-steam-label"], { ...OUT, duration: 0.4, ease: "power2.in" }, 0);
   },
 });
 

@@ -2,16 +2,16 @@ import { PROBLEM as P } from "../content.js";
 import { chain, fracAtX } from "../thread.js";
 import { OUT, header, enterHeader, rise } from "./shared.js";
 
-const Y = 960;
-// Una señal débil y después plano: la línea intenta avanzar y se detiene.
-const base = chain([0, Y], [270, Y], [290, Y - 34], [306, Y + 24], [322, Y - 12], [336, Y], [1920, Y]);
+// Divisoria bajo la cabecera: una señal débil y después plano. La línea intenta avanzar y se detiene.
+const Y = 336;
+const base = chain([0, Y], [270, Y], [288, Y - 20], [304, Y + 16], [320, Y - 8], [334, Y], [1920, Y]);
 const STALL = fracAtX(base, 640);
 const max = Math.max(...P.saturation.bars.map((b) => b.value));
 
 export default {
   shapes: { base },
   html: `
-    ${header({ n: "02", kicker: P.title, title: P.subtitle, hook: P.hook })}
+    ${header({ n: "02", title: P.subtitle, hook: P.hook })}
     <section class="blk abs c2-col c2-a" style="left:120px">
       <p class="mono">${P.invisibility.label}</p>
       <p class="big">${P.invisibility.big}</p>
@@ -48,8 +48,7 @@ export default {
     {
       name: "SATURACION",
       build(tl) {
-        tl.to(".c2-a", { opacity: 0.4, duration: 0.6 }, 0)
-          .from(".c2-b .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
+        tl.from(".c2-b .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
           .from(".c2-b .big", { ...OUT, scale: 1.4, transformOrigin: "0 100%", duration: 1, ease: "expo.out" }, 0.15);
         rise(tl, ".c2-b .c2-cap", 0.5);
         // Barras con valor por variable --v (patrón de tablero-barras).
@@ -60,17 +59,11 @@ export default {
     {
       name: "FALLA",
       build(tl) {
-        tl.to(".c2-b", { opacity: 0.4, duration: 0.6 }, 0)
-          .from(".c2-c .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
+        tl.from(".c2-c .mono", { ...OUT, y: 16, duration: 0.5 }, 0.1)
           .from(".c2-c .big", { ...OUT, scale: 1.4, transformOrigin: "0 100%", duration: 1, ease: "expo.out" }, 0.15);
         rise(tl, ".c2-c .c2-cap", 0.5);
         rise(tl, ".c2-c .c2-rows > div", 0.7, { stagger: 0.18 });
       },
-    },
-    {
-      name: "DIAGNOSTICO",
-      // Cierre: los tres indicadores vuelven a la misma jerarquía y quedan quietos.
-      build(tl) { tl.to([".c2-a", ".c2-b"], { opacity: 1, duration: 0.7, ease: "power2.out" }, 0); },
     },
   ],
 };

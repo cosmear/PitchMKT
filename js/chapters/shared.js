@@ -6,7 +6,7 @@ export const OUT = { autoAlpha: 0 };
 export const header = ({ n, kicker, title, hook }) => `
   <div class="blk abs ch-num" aria-hidden="true">${n}</div>
   <header class="blk abs ch-head">
-    <p class="ch-kicker"><span class="ch-kicker__n">${n} / 08</span><i class="ch-kicker__rule"></i><span>${kicker}</span></p>
+    <p class="ch-kicker"><span class="ch-kicker__n">${n} / 08</span><i class="ch-kicker__rule"></i>${kicker ? `<span>${kicker}</span>` : ""}</p>
     <h2 class="ch-title" data-type="words"><span data-ls-line>${title}</span></h2>
     ${hook ? `<p class="ch-hook">${hook}</p>` : ""}
   </header>`;
